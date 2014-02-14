@@ -1,0 +1,7 @@
+Persisting Data
+
+redis
+http://redis.io/
+
+npm install redis
+

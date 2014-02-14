@@ -1,0 +1,11 @@
+Streams
+
+
+curl -d 'hello' http://localhost:8080
+
+curl --upload-file readme.md http://localhost:8080
+
+curl --upload-file file.jpg http://localhost:8080
+
+
+

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+        var server = io.connect('http://localhost:8080')
+        server.on('messages', function(data) {
+            alert(data.hello);
+        });
+        server.on('question', insertQuestion);
+
+        $('#char_form').submit(function(e) {
+            var message = $('#char_input').val();
+            socket.emit('messages', message);
+        });
+    </script></head>
+<body>
+
+<ul></ul>
+
+<form id="char_form" action="/">
+    <input id="char_input" type="text" value="a message"/>
+</form>
+
+</body>
+</html>

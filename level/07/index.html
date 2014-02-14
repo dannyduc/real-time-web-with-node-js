@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="insertQuestion.js"></script>
+    <script type="text/javascript">
+        var server = io.connect('http://localhost:8080')
+
+        server.on('messages', function(data) {
+            alert(data.hello);
+        });
+
+        server.on('add chatter', insertChatter);
+
+        server.on('remove chatter', function(name) {
+            $('#chatters li[data-name=' + name + ']').remove();
+        });
+
+        var inserChatter = function(name) {
+            var chatter = $('<li>' +name + '</li>').data('name', name)
+            $('#chatters').append(chatter);
+        }
+
+        $('#char_form').submit(function(e) {
+            var message = $('#char_input').val();
+            socket.emit('messages', message);
+        });
+    </script>
+</head>
+<body>
+
+<p>aok...</p>
+
+</body>
+</html>

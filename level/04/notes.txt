@@ -1,0 +1,27 @@
+Modules
+
+look in same directory
+look in absolute path
+
+search in node module directory
+/Home/danny/my_app/node_modules
+/Home/danny/node_modules
+/Home/node_modules
+/node_modules
+
+Node Package Manager (npm)
+  local only
+
+npm install request
+npm install coffee-script -g
+npm search request
+
+my_app/package.json
+{
+    "name": "My App",
+    "version": "1",
+    "dependencies": {
+        "connect": "1.8.7"
+    }
+}
+npm install

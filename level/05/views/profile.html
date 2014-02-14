@@ -1,0 +1,8 @@
+<h1>Profofile for <%= name %></h1>
+<ul>
+    <% for (var prop in profile) { %>
+    <% if (profile.hasOwnProperty(prop)) { %>
+        <li><%= prop %>: <%= profile[prop] %></li>
+    <% } %>
+    <% } %>
+</ul>

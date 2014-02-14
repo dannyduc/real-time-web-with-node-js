@@ -1,0 +1,19 @@
+http://nodejs.org/api/
+
+http.createServer(function(request, response) {...})
+
+http.createServer([requestListener])
+REturns a new web server object
+
+The requestListener is a function which is automatically added to the 'request' event
+
+Event:'request'
+function (request, response) { }
+
+// alternative
+
+var server = http.createServer();
+server.on('request', function(request, response){...})
+
+// listen on close event
+server.on('close', function(){...})

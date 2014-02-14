@@ -1,0 +1,9 @@
+node.js docs
+How to Node
+node.js Joyent hosting
+Nodejitsu Handbook
+npm registry
+Nodeup podcast
+npm cheat sheet
+Scoop.it tutorials
+Redis Handbook
